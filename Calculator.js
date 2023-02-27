@@ -10,7 +10,13 @@ do {
     opcion = parseInt(prompt("Selecciona una operacion: \n 1- Suma \n 2- Resta \n 3-multiplicacion \n 4-Division"));
 
     numero2 = parseFloat(prompt("Introduce un numero: "));
-    resultado=null;
+    resultado=obtenerResultado(numero1,numero2,opcion,resultado);
+    alert(console.log("El resultado es: " + resultado));
+    let confirmar = confirm("Desea hacer otra operacion?");
+}while (confirmar);
+
+function obtenerResultado(numero1,numero2,opcion,resultado){
+
     switch (opcion) {
         case 1:
             resultado = numero1 + numero2;
@@ -36,5 +42,5 @@ do {
     if(resultado!=null){
     alert(console.log("El resultado es: " + resultado));
     }
-    let confirmar = confirm("Desea hacer otra operacion?");
-} while (confirmar);
+   
+} 
